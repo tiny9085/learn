@@ -1,14 +1,10 @@
 const $ = new Env('蓝信签到')
 sign();
 function sign () {
-  let body = {
-        'longitude': 112.879524,
-        'latitude': 28.22987,
-        '__RequestVerificationToken': 'A5KIjFg47HhO5GS7UUzuha3lIaXFKYjf4jr5IJaO9ilLHvrqIyC5XashQv6P-Vl1JGAA1mRdKHyPUEJtlEZylwmskS8dfhgWtj0JIUiwlcVNiGk1Xji2pRoWe6CRIAFgrPw_-E_7HFa7rI1giC1n1t8OokkI84136FCsMR5jd0s1'
-      }
   return new Promise(async resolve => {
     let url = {
-        url : `https://attendanceserviceapi.pactera.com:8099/LanXin/zh-cn/GPS/AttendanceCheckIn`,
+        url : 'https://attendanceserviceapi.pactera.com:8099/LanXin/zh-cn/GPS/AttendanceCheckIn',
+      'longitude=112.879524&latitude=28.22987&__RequestVerificationToken=A5KIjFg47HhO5GS7UUzuha3lIaXFKYjf4jr5IJaO9ilLHvrqIyC5XashQv6P-Vl1JGAA1mRdKHyPUEJtlEZylwmskS8dfhgWtj0JIUiwlcVNiGk1Xji2pRoWe6CRIAFgrPw_-E_7HFa7rI1giC1n1t8OokkI84136FCsMR5jd0s1'
         headers : {
          'Accept': 'application/json, text/javascript, */*; q=0.01',
          'Accept-Encoding': 'gzip, deflate, br',
@@ -21,8 +17,7 @@ function sign () {
          'Referer': 'https://attendanceserviceapi.pactera.com:8099/LanXin/zh-cn/GPS/Index',
          'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 13_1_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 es360messenger/7.22.30-796 clientType/phone',
          'X-Requested-With': 'XMLHttpRequest'
-       },
-      body : JSON.stringify(body)
+       }
       }
       $.post(url, async (err, resp, data) => {
         try {
