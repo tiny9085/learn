@@ -4,7 +4,7 @@ function sign () {
   return new Promise(async resolve => {
     let url = {
         url : 'https://attendanceserviceapi.pactera.com:8099/LanXin/zh-cn/GPS/AttendanceCheckIn',
-      'longitude=112.879524&latitude=28.22987&__RequestVerificationToken=A5KIjFg47HhO5GS7UUzuha3lIaXFKYjf4jr5IJaO9ilLHvrqIyC5XashQv6P-Vl1JGAA1mRdKHyPUEJtlEZylwmskS8dfhgWtj0JIUiwlcVNiGk1Xji2pRoWe6CRIAFgrPw_-E_7HFa7rI1giC1n1t8OokkI84136FCsMR5jd0s1'
+        body :'longitude=112.879524&latitude=28.22987&__RequestVerificationToken=A5KIjFg47HhO5GS7UUzuha3lIaXFKYjf4jr5IJaO9ilLHvrqIyC5XashQv6P-Vl1JGAA1mRdKHyPUEJtlEZylwmskS8dfhgWtj0JIUiwlcVNiGk1Xji2pRoWe6CRIAFgrPw_-E_7HFa7rI1giC1n1t8OokkI84136FCsMR5jd0s1',
         headers : {
          'Accept': 'application/json, text/javascript, */*; q=0.01',
          'Accept-Encoding': 'gzip, deflate, br',
