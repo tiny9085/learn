@@ -7,8 +7,8 @@ function task () {
       }
   return new Promise(async resolve => {
     let url = {
-        url = `https://attendanceserviceapi.pactera.com:8099/LanXin/zh-cn/GPS/AttendanceCheckIn&body=${encodeURIComponent(JSON.stringify(body))}`,
-        headers = {
+        'url' : `https://attendanceserviceapi.pactera.com:8099/LanXin/zh-cn/GPS/AttendanceCheckIn&body=${encodeURIComponent(JSON.stringify(body))}`,
+        'headers' : {
          'Accept': 'application/json, text/javascript, */*; q=0.01',
          'Accept-Encoding': 'gzip, deflate, br',
          'Accept-Language': 'zh-cn',
