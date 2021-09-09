@@ -25,7 +25,7 @@ function sign () {
         } catch (error) {
           $.logErr(e, resp);
         } finally{
-          resolve()
+          $.done();
         }
       })
   })
