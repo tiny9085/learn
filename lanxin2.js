@@ -2,6 +2,12 @@ const chavy = init()
 
 sign()
 
+let body =  {
+        'longitude': 112.879524,
+        'latitude': 28.22987,
+        '__RequestVerificationToken': 'A5KIjFg47HhO5GS7UUzuha3lIaXFKYjf4jr5IJaO9ilLHvrqIyC5XashQv6P-Vl1JGAA1mRdKHyPUEJtlEZylwmskS8dfhgWtj0JIUiwlcVNiGk1Xji2pRoWe6CRIAFgrPw_-E_7HFa7rI1giC1n1t8OokkI84136FCsMR5jd0s1'
+    }
+
 function sign() {
   let url = {
     url: `https://attendanceserviceapi.pactera.com:8099/LanXin/zh-cn/GPS/AttendanceCheckIn`,
@@ -18,11 +24,7 @@ function sign() {
       'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 13_1_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 es360messenger/7.22.30-796 clientType/phone',
       'X-Requested-With': 'XMLHttpRequest'
     },
-    body: {
-        'longitude': 112.879524,
-        'latitude': 28.22987,
-        '__RequestVerificationToken': 'A5KIjFg47HhO5GS7UUzuha3lIaXFKYjf4jr5IJaO9ilLHvrqIyC5XashQv6P-Vl1JGAA1mRdKHyPUEJtlEZylwmskS8dfhgWtj0JIUiwlcVNiGk1Xji2pRoWe6CRIAFgrPw_-E_7HFa7rI1giC1n1t8OokkI84136FCsMR5jd0s1'
-    }
+    body: encodeURIComponent(JSON.stringify(body))
   }
 
   chavy.post(url, (error, response, data) => {
