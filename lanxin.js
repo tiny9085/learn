@@ -1,5 +1,6 @@
 const $ = new Env('蓝信签到')
-function task () {
+sign();
+function sign () {
   let body = {
         'longitude': 112.879524,
         'latitude': 28.22987,
@@ -7,8 +8,8 @@ function task () {
       }
   return new Promise(async resolve => {
     let url = {
-        'url' : `https://attendanceserviceapi.pactera.com:8099/LanXin/zh-cn/GPS/AttendanceCheckIn&body=${encodeURIComponent(JSON.stringify(body))}`,
-        'headers' : {
+        url : `https://attendanceserviceapi.pactera.com:8099/LanXin/zh-cn/GPS/AttendanceCheckIn`,
+        headers : {
          'Accept': 'application/json, text/javascript, */*; q=0.01',
          'Accept-Encoding': 'gzip, deflate, br',
          'Accept-Language': 'zh-cn',
@@ -20,7 +21,8 @@ function task () {
          'Referer': 'https://attendanceserviceapi.pactera.com:8099/LanXin/zh-cn/GPS/Index',
          'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 13_1_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 es360messenger/7.22.30-796 clientType/phone',
          'X-Requested-With': 'XMLHttpRequest'
-       }
+       },
+      body : JSON.stringify(body)
       }
       $.post(url, async (err, resp, data) => {
         try {
