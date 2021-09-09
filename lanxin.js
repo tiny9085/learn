@@ -1,6 +1,6 @@
 const $ = new Env('蓝信签到')
 function task () {
-  let param = {
+  let body = {
         'longitude': 112.879524,
         'latitude': 28.22987,
         '__RequestVerificationToken': 'A5KIjFg47HhO5GS7UUzuha3lIaXFKYjf4jr5IJaO9ilLHvrqIyC5XashQv6P-Vl1JGAA1mRdKHyPUEJtlEZylwmskS8dfhgWtj0JIUiwlcVNiGk1Xji2pRoWe6CRIAFgrPw_-E_7HFa7rI1giC1n1t8OokkI84136FCsMR5jd0s1'
